@@ -1,20 +1,22 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   
 
-  const loopSlides = (n:number) => {
-    const slides: React.ReactElement[] = []
-    for(let i=2; i <= n; i++){
-      slides.push(<div
-      key={i}
-              className={`item-slick1 item-slick${i}`}
-              style={{ backgroundImage: `url(/images/slides/slide_${i}.jpeg)` }}
-            ></div>)
-    }
-    return slides
-  }
+const loopSlides = (n: number): React.ReactElement[] => {
+	const slides: React.ReactElement[] = [];
+	for (let i = 2; i <= n; i++) {
+		slides.push(
+			<div
+				key={i}
+				className={`item-slick1 item-slick${i}`}
+				style={{ backgroundImage: `url(/images/slides/slide_${i}.jpeg)` }}
+			></div>
+		);
+	}
+	return slides;
+};
   
   return (
     <>

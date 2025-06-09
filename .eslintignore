@@ -1,0 +1,4 @@
+# Ignore vendor files and libraries
+public/js/**
+public/vendor/**
+src/assets/vendor/**
