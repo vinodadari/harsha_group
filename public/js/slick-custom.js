@@ -130,6 +130,56 @@
         });
 
 
+
+        /*[ Slick4 ]
+        ===========================================================*/
+        var itemSlick4 = $('.item-slick4');
+        var action1s4 = [];
+        var cap1Slide4 = [];
+
+        for(var i=0; i<itemSlick4.length; i++) {
+          cap1Slide4[i] = $(itemSlick4[i]).find('.wrap-content-slide2 .blo2');
+        }
+
+
+        $('.slick4').on('init', function(){
+
+            action1s4[0] = setTimeout(function(){
+                $(cap1Slide4[0]).addClass($(cap1Slide4[0]).data('appear') + ' visible-true');
+            },200);              
+        });
+
+
+        $('.slick4').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            dots: true,
+            appendDots: $('.wrap-slick4-dots'),
+            dotsClass:'slick4-dots',
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 6000,
+            arrows: true,
+            appendArrows: $('.wrap-slick4'),
+            prevArrow:'<button class="arrow-slick4 prev-slick4"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+            nextArrow:'<button class="arrow-slick4 next-slick4"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',  
+        });
+
+        $('.slick4').on('afterChange', function(event, slick, currentSlide){ 
+            for(var i=0; i<itemSlick4.length; i++) {
+
+              clearTimeout(action1s4[i]);
+
+              $(cap1Slide4[i]).removeClass($(cap1Slide4[i]).data('appear') + ' visible-true');
+            }
+
+            action1s4[currentSlide] = setTimeout(function(){
+                $(cap1Slide4[currentSlide]).addClass($(cap1Slide4[currentSlide]).data('appear') + ' visible-true');
+            },200);            
+        });
+
+
         /*[ Slick3 ]
         ===========================================================*/
         var itemSlick3 = $('.slick3').find('.item-slick3');
