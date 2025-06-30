@@ -54,11 +54,14 @@ export default function RootLayout({
 						<nav className="menu">
 							<ul className="main_menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="/">Home</a>
+								</li>
+                <li>
+									<a href="/#about">About</a>
 								</li>
 
 								<li>
-									<a href="menu.html">Plots</a>
+									<a href="/#plots">Plots</a>
 								</li>
 
 								{/* <!-- <li>
@@ -66,19 +69,11 @@ export default function RootLayout({
 								</li> --> */}
 
 								<li>
-									<a href="gallery.html">Services</a>
+									<a href="/#services">Services</a>
 								</li>
 
 								<li>
-									<a href="about.html">About</a>
-								</li>
-
-								{/* <!-- <li>
-									<a href="blog.html">Blog</a>
-								</li> --> */}
-
-								<li>
-									<a href="contact.html">Contact</a>
+									<a href="/#contact">Contact</a>
 								</li>
 							</ul>
 						</nav>
@@ -108,101 +103,34 @@ export default function RootLayout({
             </Link>
           </li>
 
-          <li className="t-center m-b-13">
-            <Link href="/menu" className="txt19">
-              Menu
-            </Link>
-          </li>
 
           <li className="t-center m-b-13">
-            <Link href="/gallery" className="txt19">
-              Gallery
-            </Link>
-          </li>
-
-          <li className="t-center m-b-13">
-            <Link href="/about" className="txt19">
+            <Link href="/#about" className="txt19">
               About
             </Link>
           </li>
-
+          
           <li className="t-center m-b-13">
-            <Link href="/blog" className="txt19">
-              Blog
+            <Link href="/#plots" className="txt19">
+              Plots
+            </Link>
+          </li>
+          
+          <li className="t-center m-b-13">
+            <Link href="/#services" className="txt19">
+              Services
             </Link>
           </li>
 
+
           <li className="t-center m-b-33">
-            <Link href="/contact" className="txt19">
+            <Link href="/#contact" className="txt19">
               Contact
             </Link>
           </li>
 
-          <li className="t-center">
-            <Link
-              href="/reservation"
-              className="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
-            >
-              Reservation
-            </Link>
-          </li>
         </ul>
 
-        {/* Gallery Sidebar */}
-        <div className="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
-          <h4 className="txt20 m-b-33">Gallery</h4>
-
-          {/* Gallery */}
-          <div className="wrap-gallery-sidebar flex-w">
-            <Image
-              src="/images/photo-gallery-01.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-
-            <Image
-              src="/images/photo-gallery-02.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-
-            <Image
-              src="/images/photo-gallery-03.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-
-            <Image
-              src="/images/photo-gallery-04.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-
-            <Image
-              src="/images/photo-gallery-05.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-
-            <Image
-              src="/images/photo-gallery-06.jpg"
-              width={60}
-              height={60}
-              alt="Gallery"
-              className="item-gallery-sidebar wrap-pic-w"
-            />
-          </div>
-        </div>
       </aside>
         {children}
 
